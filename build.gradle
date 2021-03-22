@@ -1,0 +1,31 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+    id 'groovy'
+}
+
+group 'org.artesanoskuad.gradle'
+version '0.1.0-SNAPSHOT'
+description 'BombDogUI es una biblioteca que permite ejecutar pruebas de UI'
+
+repositories {
+    repositories {
+        maven {
+            url 'https://artesanoskuad.jfrog.io/artifactory/gradle/'
+            credentials {
+                username = "${artifactory_user}"
+                password = "${artifactory_password}"
+            }
+        }
+    }
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
