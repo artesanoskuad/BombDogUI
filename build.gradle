@@ -1,31 +1,70 @@
 plugins {
     id 'java-gradle-plugin'
     id 'maven-publish'
+    id 'com.gradle.plugin-publish' version '0.13.0'
     id 'groovy'
 }
 
 group 'org.artesanoskuad.gradle'
-version '0.1.0-SNAPSHOT'
+version '0.1.4'
 description 'BombDogUI es una biblioteca que permite ejecutar pruebas de UI'
 
+
 repositories {
-    repositories {
-        maven {
-            url 'https://artesanoskuad.jfrog.io/artifactory/gradle/'
-            credentials {
-                username = "${artifactory_user}"
-                password = "${artifactory_password}"
-            }
+    maven {
+        url 'https://artesanoskuad.jfrog.io/artifactory/gradle/'
+        credentials {
+            username = "artesano.skuad@gmail.com"//"${artifactory_user}"
+            password = "ArtesanoSkuad2021"//"${artifactory_password}"
         }
     }
+    mavenLocal()
     mavenCentral()
+    google()
 }
+
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
+gradlePlugin {
+    // Define the plugin
+    plugins {
+        bombDogUiPlugin {
+            id = 'org.artesanoskuad.gradle.bombdogui'
+            displayName = "Ayudar con pruebas de UI"
+            description = "BombDogUI es lo que se conoce como un perro bomba, que te ayudará en cualquier tarea en relación con la UI"
+            implementationClass = 'org.artesanoskuad.gradle.BombDogUIPlugin'
+        }
+    }
+}
+
+// The configuration example below shows the minimum required properties
+// configured to publish your plugin to the plugin portal
+pluginBundle {
+    website = 'https://github.com/artesanoskuad/bomb-dogui'
+    vcsUrl = 'https://github.com/artesanoskuad/bomb-dogui'
+    description = 'Un verdadero Perro Bomba!'
+    tags = ['gradle', 'mockoon', 'bombdogui']
+
+    plugins {
+        bombDogUiPlugin {
+            // id is captured from java-gradle-plugin configuration
+            displayName = 'Un verdadero Perro Bomba!'
+        }
+    }
+}
+
 test {
     useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
 }

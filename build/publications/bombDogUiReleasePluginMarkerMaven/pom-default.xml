@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.artesanoskuad.gradle.bombdogui</groupId>
+  <artifactId>org.artesanoskuad.gradle.bombdogui.gradle.plugin</artifactId>
+  <version>0.1.3-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Ayudar con pruebas de UI</name>
+  <description>BombDogUI es lo que se conoce como un perro bomba, que te ayudará en cualquier tarea en relación con la UI</description>
+  <dependencies>
+    <dependency>
+      <groupId>org.artesanoskuad.gradle</groupId>
+      <artifactId>BombDogUI</artifactId>
+      <version>0.1.3-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+</project>

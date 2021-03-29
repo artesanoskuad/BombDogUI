@@ -1,0 +1,61 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.artesanoskuad.gradle",
+    "module": "BombDogUI",
+    "version": "0.1.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.7",
+      "buildId": "dekefel6frchtdzpqstgdbpruq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "BombDogUI-0.1.4.jar",
+          "url": "BombDogUI-0.1.4.jar",
+          "size": 15214,
+          "sha512": "93a68466c0feed69d7c51a8101e7192479981b2018b0e7aef6b4183bf5a913ce505db2fb4db6c5ad986ec0a3ea2df5d8d337db49093cfe56f6f44fe7cbf1ff1c",
+          "sha256": "02a7a12a26bd1baed003a73ee8b3511e3fb2e456c247e86bf0df051bbc6a1f2f",
+          "sha1": "b06d4a2fb25acec09db582601d0cded9ad37de7b",
+          "md5": "13272dc3244a7b20d5365211ebbb86ef"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "BombDogUI-0.1.4.jar",
+          "url": "BombDogUI-0.1.4.jar",
+          "size": 15214,
+          "sha512": "93a68466c0feed69d7c51a8101e7192479981b2018b0e7aef6b4183bf5a913ce505db2fb4db6c5ad986ec0a3ea2df5d8d337db49093cfe56f6f44fe7cbf1ff1c",
+          "sha256": "02a7a12a26bd1baed003a73ee8b3511e3fb2e456c247e86bf0df051bbc6a1f2f",
+          "sha1": "b06d4a2fb25acec09db582601d0cded9ad37de7b",
+          "md5": "13272dc3244a7b20d5365211ebbb86ef"
+        }
+      ]
+    }
+  ]
+}

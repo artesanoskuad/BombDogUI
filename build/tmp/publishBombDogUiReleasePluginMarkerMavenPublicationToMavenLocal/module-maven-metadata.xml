@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.artesanoskuad.gradle.bombdogui</groupId>
+  <artifactId>org.artesanoskuad.gradle.bombdogui.gradle.plugin</artifactId>
+  <versioning>
+    <latest>0.1.3-SNAPSHOT</latest>
+    <versions>
+      <version>0.1.3-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20210326015426</lastUpdated>
+  </versioning>
+</metadata>
